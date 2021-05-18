@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "LCDConversion.h"
+#include <vector>
 
 using namespace std;
 
@@ -10,26 +11,32 @@ using namespace std;
 int main()
 {
 	LCDConversion i1("   ", " | ", " | ");
-	LCDConversion i2(" - ", " _|", "|_ ");
-	LCDConversion i3(" - ", " _|", " _|");
+	LCDConversion i2(" _ ", " _|", "|_ ");
+	LCDConversion i3(" _ ", " _|", " _|");
 	LCDConversion i4("   ", "|_|", "  |");
-	LCDConversion i5(" - ", "|_ ", " _|");
-	LCDConversion i6(" - ", "|_ ", "|_|");
-	LCDConversion i7(" - ", "  |", "  |");
-	LCDConversion i8(" - ", "|_|", "|_|");
-	LCDConversion i9(" - ", "|_|", " _|");
+	LCDConversion i5(" _ ", "|_ ", " _|");
+	LCDConversion i6(" _ ", "|_ ", "|_|");
+	LCDConversion i7(" _ ", "  |", "  |");
+	LCDConversion i8(" _ ", "|_|", "|_|");
+	LCDConversion i9(" _ ", "|_|", " _|");
 	
     int convert;
+	vector<int> convertarray;
+	
 	std::cout << "Please Enter a Number to Convert";
 	try
 	{
 		cin >> convert;
+		
 	}
 	catch (const std::exception&)
 	{
 		cout << "Error Occurred";
 	}
-	
+	if (convert > 0) {
+		convertarray.push_back(convert);
+	}
+
 	switch (convert)
 	{
 	case 1:
